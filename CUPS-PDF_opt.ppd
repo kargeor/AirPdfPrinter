@@ -29,15 +29,15 @@
 *PCFileName:	"CUPS-PDF.PPD"
 *Manufacturer:	"Generic"
 *Product:	"(CUPS v1.1)"
-*ModelName:     "Generic CUPS-PDF Printer"
-*ShortNickName: "Generic CUPS-PDF Printer"
-*NickName:      "Generic CUPS-PDF Printer (w/ options)"
+*ModelName:     "Receipt Printer"
+*ShortNickName: "Receipt Printer"
+*NickName:      "Receipt Printer"
 *1284DeviceID:  "MFG:Generic;MDL:CUPS-PDF Printer;DES:Generic CUPS-PDF Printer;CLS:PRINTER;CMD:POSTSCRIPT;"
 *% cupsFilter:    "application/vnd.cups-postscript 0 pstitleiconv"
 *PSVersion:	"(2017.000) 0"
 *LanguageLevel:	"2"
-*ColorDevice:	True
-*DefaultColorSpace: RGB
+*ColorDevice:	False
+*DefaultColorSpace: Gray
 *FileSystem:	False
 *Throughput:	"8"
 *LandscapeOrientation: Plus90
@@ -45,13 +45,13 @@
 
 *HWMargins: 0 0 0 0
 *VariablePaperSize: True
-*MaxMediaWidth: 100000
+*MaxMediaWidth: 162
 *MaxMediaHeight: 100000
 *NonUIOrderDependency: 100 AnySetup *CustomPageSize
 *CustomPageSize True: "pop pop pop
 <</PageSize [ 5 -2 roll ] /ImagingBBox null>>setpagedevice"
 *End
-*ParamCustomPageSize Width: 1 points 36 100000
+*ParamCustomPageSize Width: 1 points 162 162
 *ParamCustomPageSize Height: 2 points 36 100000
 *ParamCustomPageSize Orientation: 3 int 0 3
 *ParamCustomPageSize WidthOffset: 4 points 0 0
@@ -62,29 +62,26 @@
 *OpenUI *PageSize/Page Size: PickOne
 *OrderDependency: 100 AnySetup *PageSize
 *DefaultPageSize: THERMALPAPER
-*PageSize THERMALPAPER: "<</PageSize[144 7200]/ImagingBBox null>>setpagedevice"
+*PageSize THERMALPAPER: "<</PageSize[162 864]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageSize
 
 *OpenUI *PageRegion: PickOne
 *OrderDependency: 100 AnySetup *PageRegion
 *DefaultPageRegion: THERMALPAPER
-*PageRegion THERMALPAPER: "<</PageSize[144 7200]/ImagingBBox null>>setpagedevice"
+*PageRegion THERMALPAPER: "<</PageSize[162 864]/ImagingBBox null>>setpagedevice"
 *CloseUI: *PageRegion
 
 *DefaultImageableArea: THERMALPAPER
-*ImageableArea THERMALPAPER: "0 0 144 7200"
+*ImageableArea THERMALPAPER: "0 0 162 864"
 
 *DefaultPaperDimension: THERMALPAPER
-*PaperDimension THERMALPAPER: "144 7200"
+*PaperDimension THERMALPAPER: "162 864"
 
 *OpenUI *Resolution/Output Resolution: PickOne
 *OrderDependency: 100 AnySetup *Resolution
 *DefaultResolution: 300dpi
 *Resolution 150dpi/150 DPI: "<</HWResolution[150 150]>>setpagedevice"
 *Resolution 300dpi/300 DPI: "<</HWResolution[300 300]>>setpagedevice"
-*Resolution 600dpi/600 DPI: "<</HWResolution[600 600]>>setpagedevice"
-*Resolution 1200dpi/1200 DPI: "<</HWResolution[1200 1200]>>setpagedevice"
-*Resolution 2400dpi/2400 DPI: "<</HWResolution[2400 2400]>>setpagedevice"
 *CloseUI: *Resolution
 
 *OpenUI *PDFVer/PDF version: PickOne

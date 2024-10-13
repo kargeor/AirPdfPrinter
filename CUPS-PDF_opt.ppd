@@ -42,17 +42,21 @@
 *Throughput:	"8"
 *LandscapeOrientation: Plus90
 *TTRasterizer:	Type42
+*DefaultResolution: "300x300"
+*DefaultPxlSize: "300x300"
+*PaperLength: "12in"
+*PaperWidth: "2.25in"
 
 *HWMargins: 0 0 0 0
-*VariablePaperSize: True
+*VariablePaperSize: False
 *MaxMediaWidth: 162
-*MaxMediaHeight: 100000
+*MaxMediaHeight: 864
 *NonUIOrderDependency: 100 AnySetup *CustomPageSize
 *CustomPageSize True: "pop pop pop
 <</PageSize [ 5 -2 roll ] /ImagingBBox null>>setpagedevice"
 *End
 *ParamCustomPageSize Width: 1 points 162 162
-*ParamCustomPageSize Height: 2 points 36 100000
+*ParamCustomPageSize Height: 2 points 864 864
 *ParamCustomPageSize Orientation: 3 int 0 3
 *ParamCustomPageSize WidthOffset: 4 points 0 0
 *ParamCustomPageSize HeightOffset: 5 points 0 0
@@ -80,7 +84,6 @@
 *OpenUI *Resolution/Output Resolution: PickOne
 *OrderDependency: 100 AnySetup *Resolution
 *DefaultResolution: 300dpi
-*Resolution 150dpi/150 DPI: "<</HWResolution[150 150]>>setpagedevice"
 *Resolution 300dpi/300 DPI: "<</HWResolution[300 300]>>setpagedevice"
 *CloseUI: *Resolution
 
